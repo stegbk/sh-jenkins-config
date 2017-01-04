@@ -25,7 +25,7 @@ public class HelloWorldProject {
         System.out.println("Hello world!");
         System.out.println("Checking " + testNum);
         print_debug = false;
-        getInstance().computePrimesLessThan(testNum + 1);
+        getInstance().computePrimesLessThanOrEqual(testNum);
         getInstance().printCurrentPrimeList();
         if (getInstance().checkSinglePrimeAgainstList(testNum)) {
             System.out.println(testNum + "\tis prime");
@@ -41,7 +41,7 @@ public class HelloWorldProject {
         return theInstance;
     }
     
-    private boolean checkPrimeWithCurrentList(int testNum) {
+    public boolean checkPrimeWithCurrentList(int testNum) {
         for (int i = 0; i < primes.size(); i++) {
             
             if ((testNum % (int)primes.get(i)) == 0) {
@@ -51,7 +51,7 @@ public class HelloWorldProject {
         return true;        
     }
     
-    private boolean checkSinglePrimeAgainstList(int testNum) {
+    public boolean checkSinglePrimeAgainstList(int testNum) {
         return primes.indexOf(testNum) != -1;
     }
     
@@ -70,7 +70,10 @@ public class HelloWorldProject {
         }
     }
     
-    private void printCurrentPrimeList() {
+    public void computePrimesLessThanOrEqual(int testNum) {
+        computePrimesLessThan(testNum + 1);
+    }
+    public void printCurrentPrimeList() {
         if (print_debug) {
             for (int i = 0; i < primes.size(); i++) {
                 System.out.println("The prime at " + i + "\tis\t" + primes.get(i));
