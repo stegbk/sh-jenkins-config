@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>sudo find / -name &quot;slave.log&quot; </command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.32">
+      <patterns class="empty-list"/>
+      <deleteDirs>false</deleteDirs>
+      <skipWhenFailed>false</skipWhenFailed>
+      <cleanWhenSuccess>true</cleanWhenSuccess>
+      <cleanWhenUnstable>true</cleanWhenUnstable>
+      <cleanWhenFailure>true</cleanWhenFailure>
+      <cleanWhenNotBuilt>true</cleanWhenNotBuilt>
+      <cleanWhenAborted>true</cleanWhenAborted>
+      <notFailBuild>false</notFailBuild>
+      <cleanupMatrixParent>false</cleanupMatrixParent>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.WsCleanup>
+  </publishers>
+  <buildWrappers>
+    <com.elasticbox.jenkins.InstanceCreator plugin="elasticbox@4.1.1">
+      <slaveConfiguration>
+        <id>f0300ab2-02df-4689-96d5-1489f4d254fc</id>
+        <workspace>jenkins1</workspace>
+        <boxDeploymentType>ScriptBox</boxDeploymentType>
+        <box>a0e4315a-f7d2-4280-8380-ed72f762debc</box>
+        <profile>18c87e1d-5aa7-46b3-964e-b6d0ee1dc572</profile>
+        <variables>[{&quot;name&quot;: &quot;USERNAME&quot;, &quot;value&quot;: &quot;kc&quot;, &quot;scope&quot;: &quot;user&quot;, &quot;type&quot;: &quot;Text&quot;, &quot;visibility&quot;: &quot;public&quot;, &quot;required&quot;: true}, {&quot;name&quot;: &quot;PASSWORD&quot;, &quot;value&quot;: &quot;Pass_word1&quot;, &quot;scope&quot;: &quot;user&quot;, &quot;type&quot;: &quot;Password&quot;, &quot;visibility&quot;: &quot;public&quot;, &quot;required&quot;: true}]</variables>
+        <boxVersion>LATEST</boxVersion>
+        <minInstances>0</minInstances>
+        <maxInstances>1</maxInstances>
+        <tags></tags>
+        <remoteFs></remoteFs>
+        <description></description>
+        <mode>EXCLUSIVE</mode>
+        <retentionTime>30</retentionTime>
+        <maxBuilds>0</maxBuilds>
+        <executors>1</executors>
+        <launchTimeout>60</launchTimeout>
+        <cloud>elasticbox-374f7e1f-db66-4309-8dda-8bd7786529cf</cloud>
+      </slaveConfiguration>
+    </com.elasticbox.jenkins.InstanceCreator>
+  </buildWrappers>
+</project>

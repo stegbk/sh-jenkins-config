@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>Kc Stegbauer</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>XAdMZLsqYfZmqhl9GAnUteN6yXXdEMeVexlZ1EfHFV0c/8hXkElWkUFdKSl86XFU</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.10">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.52">
+      <triggers/>
+    </hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>All</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.18">
+      <emailAddress>stegbk@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <org.jenkinsci.plugins.googlelogin.GoogleUserInfo plugin="google-login@1.3">
+      <family__name>Stegbauer</family__name>
+      <name>Kc Stegbauer</name>
+      <picture>https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg</picture>
+      <locale>en</locale>
+      <gender>male</gender>
+      <email>stegbk@gmail.com</email>
+      <link>https://plus.google.com/111184131593371147162</link>
+      <given__name>Kc</given__name>
+      <id>111184131593371147162</id>
+      <verified__email>true</verified__email>
+    </org.jenkinsci.plugins.googlelogin.GoogleUserInfo>
+  </properties>
+</user>
